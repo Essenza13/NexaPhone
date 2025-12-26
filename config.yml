@@ -1,0 +1,13 @@
+Abbonamenti:
+  Red-Pro:
+    minutes: 10
+    sms: 10
+  Red-Max:
+    minutes: 10
+    sms: 10
+  Family:
+    minutes: 10
+    sms: 10
+  Infinito:
+    minutes: 10
+    sms: 10

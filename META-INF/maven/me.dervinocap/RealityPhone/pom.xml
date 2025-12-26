@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.dervinocap</groupId>
+    <artifactId>RealityPhone</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>RealityPhone</name>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>spigotmc-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.io/repository/maven-public/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>net.wesjd</groupId>
+            <artifactId>anvilgui</artifactId>
+            <version>1.9.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.19.4-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.triumphteam</groupId>
+            <artifactId>triumph-gui</artifactId>
+            <version>3.1.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.tr7zw</groupId>
+            <artifactId>item-nbt-api-plugin</artifactId>
+            <version>2.11.3</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.live.bemmamin.gps</groupId>
+            <artifactId>Main</artifactId>
+            <version>2.19.27</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/java/me/dervinocap/originphone/dependencies/GPS.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>me.dervinocap.realityscuola</groupId>
+            <artifactId>RealityScuola</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/java/me/dervinocap/originphone/dependencies/RealityScuola-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>me.dervinocap.realityposte</groupId>
+            <artifactId>RealityPoste</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/java/me/dervinocap/originphone/dependencies/RealityPoste-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>it.realityrp.realitygeneral</groupId>
+            <artifactId>RealityGeneral</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/java/me/dervinocap/originphone/dependencies/RealityGeneral-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.11.4</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+</project>
